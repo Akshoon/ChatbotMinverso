@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chatbot inteligente potenciado por Gemini AI - Tu asistente virtual avanzado">
+    <title>Minverso - Generador de Contenido LinkedIn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background-effects">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="chat-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <img src="https://minverso.com/img/logo-white.png" alt="Minverso Logo">
+                    </div>
+                    <div class="logo-text">
+                        <h1>Minverso</h1>
+                        <span class="status-indicator">
+                            <span class="status-dot"></span>
+                            Online
+                        </span>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button id="clear-chat-btn" class="action-btn" title="Limpiar chat">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 6H5H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button id="settings-btn" class="action-btn" title="Configuración">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Chat Container -->
+        <main class="chat-container" id="chat-container">
+            <div class="welcome-message" id="welcome-message">
+                <div class="welcome-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z"
+                            stroke="currentColor" stroke-width="2" />
+                        <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                        <circle cx="9" cy="9" r="1.5" fill="currentColor" />
+                        <circle cx="15" cy="9" r="1.5" fill="currentColor" />
+                    </svg>
+                </div>
+                <h2>Generador de Contenido Minverso</h2>
+                <p>Soy tu Estratega de Contenido Senior especializado en transformación digital minera. Te ayudaré a
+                    crear posts de alta conversión para LinkedIn B2B sobre VR, AI y tecnologías inmersivas.
+                </p>
+                <div class="suggestion-chips">
+                    <button class="chip"
+                        data-suggestion="Crea un post sobre el lanzamiento de un nuevo módulo de realidad virtual para entrenamiento industrial">Lanzamiento
+                        de módulo</button>
+                    <button class="chip"
+                        data-suggestion="Genera un post sobre nuestra participación en un evento de tecnología industrial">Post
+                        para evento</button>
+                    <button class="chip"
+                        data-suggestion="Escribe un post reflexivo sobre el futuro del metaverso en la industria">Reflexión
+                        industria</button>
+                    <button class="chip"
+                        data-suggestion="Crea contenido sobre un caso de éxito de implementación con un cliente">Caso de
+                        éxito</button>
+                </div>
+            </div>
+            <div class="messages" id="messages"></div>
+        </main>
+
+        <!-- Input Area -->
+        <footer class="input-area">
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea id="message-input" placeholder="Escribe tu mensaje aquí..." rows="1"
+                        autocomplete="off"></textarea>
+                    <button id="send-btn" class="send-btn" disabled>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <p class="input-hint">Presiona Enter para enviar, Shift+Enter para nueva línea</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal-overlay" id="settings-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Configuración</h3>
+                <button class="close-modal-btn" id="close-settings">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="setting-group">
+                    <label for="api-key-input">API Key de Gemini</label>
+                    <div class="api-key-wrapper">
+                        <input type="password" id="api-key-input" placeholder="Ingresa tu API Key...">
+                        <button id="toggle-api-key" class="toggle-visibility-btn" title="Mostrar/Ocultar">
+                            <svg class="eye-open" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <svg class="eye-closed hidden" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.94 17.94C16.23 19.24 14.17 20 12 20C5 20 1 12 1 12C2.24 9.68 4.03 7.65 6.22 6.17M9.53 4.47C10.32 4.16 11.15 4 12 4C19 4 23 12 23 12C22.39 13.14 21.66 14.2 20.83 15.17M14.12 14.12C13.56 14.68 12.8 15 12 15C11.2 15 10.44 14.68 9.88 14.12C9.32 13.56 9 12.8 9 12C9 11.2 9.32 10.44 9.88 9.88"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                <path d="M1 1L23 23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="setting-hint">
+                        Obtén tu API Key en
+                        <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">Google AI
+                            Studio</a>
+                    </p>
+                </div>
+                <div class="setting-group">
+                    <label for="model-select">Modelo</label>
+                    <select id="model-select">
+                        <optgroup label="Gemini 2.0 (Recomendado)">
+                            <option value="gemini-2.0-flash-exp">Gemini 2.0 Flash Exp</option>
+                            <option value="gemini-2.0-flash" selected>Gemini 2.0 Flash</option>
+                            <option value="gemini-2.0-flash-lite">Gemini 2.0 Flash Lite</option>
+                        </optgroup>
+                        <optgroup label="Gemini 2.5">
+                            <option value="gemini-2.5-pro">Gemini 2.5 Pro</option>
+                            <option value="gemini-2.5-flash">Gemini 2.5 Flash</option>
+                            <option value="gemini-2.5-flash-lite">Gemini 2.5 Flash Lite</option>
+                        </optgroup>
+                        <optgroup label="Gemini 3.0">
+                            <option value="gemini-3-pro">Gemini 3 Pro</option>
+                            <option value="gemini-3-flash">Gemini 3 Flash</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <button id="save-settings" class="save-btn">Guardar configuración</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading indicator for responses -->
+    <template id="loading-template">
+        <div class="message ai-message loading-message">
+            <div class="message-avatar">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="message-content">
+                <div class="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
