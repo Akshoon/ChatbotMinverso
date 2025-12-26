@@ -157,8 +157,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    max-width: 900px;
-    margin: 0 auto;
+    width: 100%;
     position: relative;
 }
 
@@ -171,9 +170,12 @@ body {
     border-bottom: 1px solid var(--border-color);
     position: relative;
     z-index: 10;
+    width: 100%;
 }
 
 .header-content {
+    max-width: 900px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -281,6 +283,9 @@ body {
     overflow-y: auto;
     padding: 1.5rem;
     scroll-behavior: smooth;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .chat-container::-webkit-scrollbar {
@@ -322,13 +327,14 @@ body {
 .welcome-icon {
     width: 80px;
     height: 80px;
-    background: var(--primary-gradient);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-xl);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    box-shadow: var(--shadow-glow);
+    box-shadow: var(--shadow-md);
     animation: bounce 2s ease-in-out infinite;
 }
 
@@ -348,6 +354,12 @@ body {
     width: 40px;
     height: 40px;
     color: white;
+}
+
+.welcome-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 
 .welcome-message h2 {
@@ -506,16 +518,19 @@ body {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-top: 1px solid var(--border-color);
+    width: 100%;
 }
 
 .input-container {
-    max-width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .input-wrapper {
     display: flex;
     gap: 0.75rem;
-    align-items: flex-end;
+    align-items: center;
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
@@ -539,7 +554,9 @@ body {
     min-height: 24px;
     max-height: 150px;
     line-height: 1.5;
-    padding: 0.25rem 0.5rem;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
 }
 
 #message-input::placeholder {

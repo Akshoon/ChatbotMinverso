@@ -1,41 +1,41 @@
-## 📋 Características
+## Caracteristicas
 
-- 🤖 Potenciado por Google Gemini AI (2.0, 2.5 y 3.0)
-- 🎯 Prompt especializado en contenido B2B para minería e innovación
-- 🎨 Diseño premium con paleta de colores Minverso
-- 💬 Historial de conversación contextual
-- 📝 Formato Markdown en respuestas
-- ⚙️ Configuración persistente en localStorage
+- Potenciado por Google Gemini AI (2.5 y 3.0)
+- Prompt especializado en contenido B2B para mineria e innovacion
+- Diseno premium con paleta de colores Minverso
+- Historial de conversacion contextual
+- Formato Markdown en respuestas
+- Configuracion persistente en localStorage
 
-## 🛠️ Tecnologías
+## Tecnologias
 
 - HTML5
 - CSS3 (Vanilla)
 - JavaScript (Vanilla)
 - Google Gemini API
 
-## 🔧 Configuración
+## Configuracion
 
 1. **Obtener API Key**
    - Visita [Google AI Studio](https://aistudio.google.com/app/apikey)
    - Crea o selecciona un proyecto
    - Copia tu API Key
 
-2. **Configurar en la aplicación**
-   - Abre la aplicación
-   - Haz clic en el ícono de configuración (⚙️)
+2. **Configurar en la aplicacion**
+   - Abre la aplicacion
+   - Haz clic en el icono de configuracion
    - Pega tu API Key
-   - Selecciona el modelo deseado (recomendado: Gemini 2.0 Flash)
-   - Guarda la configuración
+   - Selecciona el modelo deseado (recomendado: Gemini 2.5 Flash)
+   - Guarda la configuracion
 
-## 📦 Uso Local
+## Uso Local
 
 ```bash
 # Simplemente abre index.html en tu navegador
-# No requiere instalación ni servidor
+# No requiere instalacion ni servidor
 ```
 
-## 🌐 Despliegue en GitHub Pages
+## Despliegue en GitHub Pages
 
 ### Paso 1: Crear Repositorio
 
@@ -55,12 +55,12 @@ git commit -m "Initial commit: Chatbot Minverso"
 ### Paso 3: Activar GitHub Pages
 
 1. Ve a tu repositorio en GitHub
-2. Click en **Settings** (Configuración)
-3. En el menú lateral, click en **Pages**
+2. Click en **Settings** (Configuracion)
+3. En el menu lateral, click en **Pages**
 4. En **Source**, selecciona **main** branch
 5. Click en **Save**
 
-**¡Listo!** Tu chatbot estará disponible en:
+**Listo!** Tu chatbot estara disponible en:
 ```
 https://TU-USUARIO.github.io/chatbot-minverso
 ```
@@ -69,79 +69,67 @@ https://TU-USUARIO.github.io/chatbot-minverso
 
 Edita este archivo y reemplaza la URL del demo con tu URL real.
 
-## 📱 Uso
+## Uso
 
 ### Ejemplos de Prompts
 
 **Para generar un post:**
 ```
-Crea un post sobre el lanzamiento de nuestra nueva solución 
-de capacitación en VR para operadores de maquinaria pesada
+Crea un post sobre el lanzamiento de nuestra nueva solucion 
+de capacitacion en VR para operadores de maquinaria pesada
 ```
 
 **Para reflexiones del sector:**
 ```
-Escribe un post reflexivo sobre cómo la realidad virtual 
-está transformando la seguridad minera
+Escribe un post reflexivo sobre como la realidad virtual 
+esta transformando la seguridad minera
 ```
 
 **Para eventos:**
 ```
-Genera contenido para anunciar nuestra participación 
+Genera contenido para anunciar nuestra participacion 
 en ExpoMin 2024
 ```
 
 ### Formato de Salida
 
-El chatbot generará automáticamente:
+El chatbot generara automaticamente:
 
-1. **3 Opciones de Gancho** - Diferentes ángulos para captar atención
-2. **Cuerpo del Post** - Contenido humanizado y técnico
-3. **Estrategia de Etiquetado** - Sugerencias de a quién mencionar
+1. **3 Opciones de Gancho** - Diferentes angulos para captar atencion
+2. **Cuerpo del Post** - Contenido humanizado y tecnico
+3. **Estrategia de Etiquetado** - Sugerencias de a quien mencionar
 4. **Pregunta de Cierre** - Para maximizar comentarios
 5. **Primer Comentario** - Para romper el hielo
 
-## 🎯 Estrategia de Contenido
+## Estrategia de Contenido
 
-El chatbot está optimizado para:
+El chatbot esta optimizado para:
 
-- ✅ Maximizar el "Ratio de Curiosidad" (visitas a página de empresa)
-- ✅ Priorizar comentarios orgánicos (0.57 conversión) vs likes (0.03)
-- ✅ Aplicar los 4 pilares de contenido exitoso:
-  1. Social Proof (validación)
+- Maximizar el "Ratio de Curiosidad" (visitas a pagina de empresa)
+- Priorizar comentarios organicos (0.57 conversion) vs likes (0.03)
+- Aplicar los 4 pilares de contenido exitoso:
+  1. Social Proof (validacion)
   2. Gancho Inverso (disruptivo)
-  3. Micro-Conversación (invitar a opinar)
+  3. Micro-Conversacion (invitar a opinar)
   4. CTA de Curiosidad (no venta directa)
 
-## 🔒 Seguridad
+## Seguridad
 
 - Tu API Key se almacena **solo en tu navegador** (localStorage)
-- No se envía a ningún servidor excepto Google AI
-- Puedes borrar la configuración en cualquier momento
+- No se envia a ningun servidor excepto Google AI
+- Puedes borrar la configuracion en cualquier momento
 
-## 🛠️ Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 chatbot-minverso/
 ├── index.html      # Estructura HTML
 ├── styles.css      # Estilos con paleta Minverso
-├── app.js          # Lógica + System Prompt
+├── app.js          # Logica + System Prompt
 └── README.md       # Este archivo
 ```
 
-## 📝 Personalización
-
-### Cambiar Colores
-
-Edita las variables CSS en `styles.css`:
-
-```css
-:root {
-    --bringer-s-accent: #3F6EE9;        /* Azul principal */
-    --bringer-s-text-accent: #5C9DFF;   /* Azul claro */
-    /* ... más variables */
-}
-```
+## Personalizacion
 
 ### Modificar Prompt del Sistema
 
@@ -151,7 +139,7 @@ Edita `SYSTEM_PROMPT` en `app.js` para ajustar:
 - Formato de salida
 - Instrucciones de escritura
 
-## 🤝 Contribuir
+## Contribuir
 
 Si quieres mejorar el chatbot:
 
@@ -161,16 +149,17 @@ Si quieres mejorar el chatbot:
 4. Push a la rama (`git push origin feature/mejora`)
 5. Abre un Pull Request
 
-## 📄 Licencia
+## Licencia
 
-Proyecto desarrollado para **Minverso** - Transformación Digital Minera
+Proyecto desarrollado para **Minverso** - Transformacion Digital Minera
 
-## 🔗 Enlaces
+## Enlaces
 
 - [Minverso](https://minverso.com)
 - [Google AI Studio](https://aistudio.google.com)
-- [Documentación Gemini API](https://ai.google.dev/gemini-api/docs)
+- [Documentacion Gemini API](https://ai.google.dev/gemini-api/docs)
 
 ---
 
-**Desarrollado con ❤️ para Minverso**
+**Desarrollado para Minverso**
+

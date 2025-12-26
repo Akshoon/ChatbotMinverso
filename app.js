@@ -225,7 +225,7 @@ function showLoadingIndicator() {
 
 // ===== Gemini API =====
 async function sendToGemini(message, apiKey) {
-    const model = localStorage.getItem('gemini_model') || 'gemini-2.0-flash';
+    const model = localStorage.getItem('gemini_model') || 'gemini-2.5-flash';
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
     // Build the contents array with conversation history
@@ -386,10 +386,20 @@ function closeModal(modal) {
 // ===== Settings =====
 function loadSettings() {
     const apiKey = localStorage.getItem('gemini_api_key') || '';
-    const model = localStorage.getItem('gemini_model') || 'gemini-2.0-flash';
+    const savedModel = localStorage.getItem('gemini_model');
+    const defaultModel = 'gemini-2.5-flash';
+
+    // Check if saved model exists in the select options
+    const modelExists = savedModel && Array.from(modelSelect.options).some(opt => opt.value === savedModel);
+    const model = modelExists ? savedModel : defaultModel;
 
     apiKeyInput.value = apiKey;
     modelSelect.value = model;
+
+    // Update localStorage if model was changed to default
+    if (!modelExists && savedModel) {
+        localStorage.setItem('gemini_model', defaultModel);
+    }
 }
 
 function saveSettings() {
