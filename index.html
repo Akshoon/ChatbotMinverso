@@ -126,7 +126,16 @@
             </div>
             <div class="modal-content">
                 <div class="setting-group">
-                    <label for="api-key-input">API Key de Gemini</label>
+                    <div class="label-with-help">
+                        <label for="api-key-input">API Key de Gemini</label>
+                        <button id="api-key-help-btn" class="help-btn" title="¿Cómo obtener la API Key?">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                <path d="M9.09 9C9.3251 8.33167 9.78915 7.76811 10.4 7.40913C11.0108 7.05016 11.7289 6.91894 12.4272 7.03871C13.1255 7.15849 13.7588 7.52152 14.2151 8.06353C14.6713 8.60553 14.9211 9.29152 14.92 10C14.92 12 11.92 13 11.92 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="17" r="1" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
                     <div class="api-key-wrapper">
                         <input type="password" id="api-key-input" placeholder="Ingresa tu API Key...">
                         <button id="toggle-api-key" class="toggle-visibility-btn" title="Mostrar/Ocultar">
@@ -170,6 +179,74 @@
                     </select>
                 </div>
                 <button id="save-settings" class="save-btn">Guardar configuración</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- API Key Guide Modal -->
+    <div class="modal-overlay" id="api-key-guide-modal">
+        <div class="modal modal-guide">
+            <div class="modal-header">
+                <h3>📚 Cómo obtener tu API Key de Gemini</h3>
+                <button class="close-modal-btn" id="close-api-guide">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-content guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Accede a Google AI Studio</h4>
+                        <p>Visita <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">aistudio.google.com/app/apikey</a> e inicia sesión con tu cuenta de Google.</p>
+                    </div>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Crear una API Key</h4>
+                        <p>Haz clic en el botón <strong>"Create API Key"</strong> o <strong>"Crear clave de API"</strong>.</p>
+                    </div>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Selecciona un proyecto</h4>
+                        <p>Puedes crear una clave en un nuevo proyecto o seleccionar uno existente. Si es tu primera vez, se creará automáticamente un proyecto para ti.</p>
+                    </div>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Copia tu API Key</h4>
+                        <p>Una vez creada, copia la clave haciendo clic en el ícono de copiar. La clave tendrá un formato similar a: <code>AIza...</code></p>
+                    </div>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Pega la clave aquí</h4>
+                        <p>Vuelve a esta aplicación, pega tu API Key en el campo correspondiente y guarda la configuración.</p>
+                    </div>
+                </div>
+                <div class="guide-warning">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 9V13M12 17H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div>
+                        <strong>⚠️ Importante:</strong>
+                        <p>Mantén tu API Key segura y no la compartas públicamente. La clave se guarda localmente en tu navegador.</p>
+                    </div>
+                </div>
+                <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener" class="guide-cta-btn">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 3H21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Ir a Google AI Studio
+                </a>
             </div>
         </div>
     </div>

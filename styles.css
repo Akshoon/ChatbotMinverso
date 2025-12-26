@@ -963,3 +963,182 @@ body {
     outline: 2px solid #667eea;
     outline-offset: 2px;
 }
+
+/* ===== API Key Help Button & Guide Modal ===== */
+.label-with-help {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.help-btn {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
+    padding: 0;
+}
+
+.help-btn:hover {
+    color: var(--bringer-s-accent);
+    background: var(--bg-glass-hover);
+    transform: scale(1.1);
+}
+
+.help-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Guide Modal */
+.modal-guide {
+    max-width: 520px;
+}
+
+.guide-content {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.guide-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.guide-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.guide-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+}
+
+.guide-step {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.step-number {
+    width: 32px;
+    height: 32px;
+    background: var(--primary-gradient);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-glow);
+}
+
+.step-content {
+    flex: 1;
+    padding-top: 0.25rem;
+}
+
+.step-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--bringer-s-heading);
+    margin-bottom: 0.25rem;
+}
+
+.step-content p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.step-content a {
+    color: var(--bringer-s-text-accent);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.step-content a:hover {
+    color: var(--bringer-s-accent);
+    text-decoration: underline;
+}
+
+.step-content code {
+    background: rgba(63, 110, 233, 0.2);
+    color: var(--bringer-s-text-accent);
+    padding: 0.15rem 0.4rem;
+    border-radius: var(--radius-sm);
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.8rem;
+}
+
+.guide-warning {
+    display: flex;
+    gap: 0.75rem;
+    background: rgba(234, 179, 8, 0.1);
+    border: 1px solid rgba(234, 179, 8, 0.3);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.guide-warning svg {
+    width: 24px;
+    height: 24px;
+    color: #eab308;
+    flex-shrink: 0;
+}
+
+.guide-warning strong {
+    color: #fbbf24;
+    font-size: 0.875rem;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.guide-warning p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.guide-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: var(--primary-gradient);
+    border: none;
+    border-radius: var(--radius-md);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.guide-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+    text-decoration: none;
+}
+
+.guide-cta-btn:active {
+    transform: translateY(0);
+}
+
+.guide-cta-btn svg {
+    width: 20px;
+    height: 20px;
+}

@@ -14,6 +14,9 @@ const modelSelect = document.getElementById('model-select');
 const saveSettingsBtn = document.getElementById('save-settings');
 const loadingTemplate = document.getElementById('loading-template');
 const suggestionChips = document.querySelectorAll('.chip');
+const apiKeyHelpBtn = document.getElementById('api-key-help-btn');
+const apiKeyGuideModal = document.getElementById('api-key-guide-modal');
+const closeApiGuideBtn = document.getElementById('close-api-guide');
 
 // ===== State =====
 let conversationHistory = [];
@@ -109,6 +112,13 @@ function setupEventListeners() {
     // Save settings
     saveSettingsBtn.addEventListener('click', saveSettings);
 
+    // API Key Guide modal
+    apiKeyHelpBtn.addEventListener('click', () => openModal(apiKeyGuideModal));
+    closeApiGuideBtn.addEventListener('click', () => closeModal(apiKeyGuideModal));
+    apiKeyGuideModal.addEventListener('click', (e) => {
+        if (e.target === apiKeyGuideModal) closeModal(apiKeyGuideModal);
+    });
+
     // Suggestion chips
     suggestionChips.forEach(chip => {
         chip.addEventListener('click', () => {
@@ -124,6 +134,7 @@ function setupEventListeners() {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeModal(settingsModal);
+            closeModal(apiKeyGuideModal);
         }
     });
 }
