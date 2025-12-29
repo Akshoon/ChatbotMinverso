@@ -23,12 +23,7 @@ let conversationHistory = [];
 let isLoading = false;
 
 // ===== System Prompt for Minverso =====
-const SYSTEM_PROMPT = `Este es el **Prompt Maestro v5.0 (Versión Ultra-Extendida y Analítica)**. He expandido cada sección integrando psicología del consumidor B2B, ingeniería de algoritmos de LinkedIn y una descomposición técnica de por qué tus 3 casos funcionaron tan bien.
-
-Copia y pega este prompt para configurar tu "IA de Estrategia Minverso":
-
----
-
+const SYSTEM_PROMPT = `
 # Prompt Maestro: Director de Estratega de Contenido B2B & Social Selling (v5.0)
 
 **CONTEXTO DEL ROL Y MISIÓN SUPREMA:**
