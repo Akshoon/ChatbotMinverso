@@ -884,6 +884,13 @@ body {
     text-decoration: underline;
 }
 
+.message-content hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border-color), transparent);
+    margin: 1rem 0;
+}
+
 /* ===== Error Message ===== */
 .error-message {
     background: rgba(239, 68, 68, 0.1) !important;

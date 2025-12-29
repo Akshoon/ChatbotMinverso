@@ -1,0 +1,17 @@
+# Logs
+*.log
+npm-debug.log*
+
+# Local development
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables (si decides agregar un .env en el futuro)
+.env
+.env.local
