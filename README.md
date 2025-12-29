@@ -33,12 +33,7 @@ Una extensión de Chrome que genera posts de alta conversión para LinkedIn B2B 
 2. Ingresa tu API Key de Gemini ([obtener aquí](https://aistudio.google.com/app/apikey))
 3. Guardar
 
-## Sugerencias rápidas
-
-- **Lanzamiento**: Nuevos módulos de realidad virtual
-- **Evento**: Participación en eventos tecnológicos
-- **Caso éxito**: Implementaciones exitosas
-
 ---
 
 **Minverso** - Transformación Digital Minera con IA
+
